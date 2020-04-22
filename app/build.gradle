@@ -18,14 +18,6 @@ android {
     }
 }
 
-task copySdk {
-    copy {
-        from("$projectDir/../../../../polar-sdk-android/libs")
-        into("$projectDir/libs")
-        include '*.aar'
-    }
-}
-
 preBuild.dependsOn copySdk
 dependencies {
     implementation "com.androidplot:androidplot-core:1.5.6"
